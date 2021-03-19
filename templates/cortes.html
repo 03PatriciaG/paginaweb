@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style2.css' %}">
+<html>
+<head>
+  <title>Changing Styles</title>
+</head>
+<body>
+<table cellspacing="1" cellpadding="0" border="0" bgcolor="black" id="shell" height="250" width="1000" align="center">
+	<tr height="50">
+		<td colspan="2" bgcolor="black"> 
+		
+			<table title="Banner" id="banner" border="0" align="center"> 
+				<tr>
+					
+					<center>
+						<h1 style="color:indianred">Sobre Changing Styles ...</h1>
+						<img src="{% static 'imagen/imagen3.jpg' %}" class="center">
+					</center>
+					
+				</tr> 
+			</table>
+		
+		</td>
+	</tr>
+	<tr height="200">
+		<td bgcolor="black"> 
+		
+			<table id="navigation" title="Navigation" border="0">
+
+				<button>
+				<center>
+					<a href="#openModal">Cortes de Cabello </a>
+
+					<div id="openModal" class="modalDialog">
+						<div>
+							<a href="#close" title="Close" class="close">X</a>
+							<ul>
+                                <h2>Cortes</h2>
+								<div class="detalle-entry">
+									<h2> {{ Blogs.text }}  </h2>
+									<p>  {{ Blogs.informacion }} </p>
+								</div> 
+								  <li id="li_text">
+									<img src='{{informacion.infromacion }}' class="center">
+								</li>
+                                
+                                <p>Corte de niño.....$150</p>
+                                <p>Corte de Hombre......$200</p>
+                                <p>Corte de mujer......$350</p>
+                                <img src="{% static 'imagen/imagen4.jpg' %}" class="center">
+                            
+								</ul> 
+
+							
+						</div>
+					</div>
+									
+					
+				</center>	
+                </button>
+                <button>
+                    <center>
+                        <a href="#openModa2">Bases </a>
+    
+                        <div id="openModa2" class="modalDialog">
+                            <div>
+                                <a href="#close" title="Close" class="close">X</a>
+                                <ul>
+                                    <h2>Bases</h2>
+                                    <div class="detalle-entry">
+                                        <h2> {{ Blogs.text }}  </h2>
+                                        <p>  {{ Blogs.informacion }} </p>
+                                    </div> 
+                                      <li id="li_text">
+                                        <img src='{{informacion.infromacion }}' class="center">
+                                    </li>
+                                    
+                                    <p>Boomerang.....$150</p>
+                                    <p>Espirales......$200</p>
+                                    <p>Huesitos......$350</p>
+                                    <img src="{% static 'imagen/imagen5.jpg' %}" class="center">
+                                
+                                    </ul> 
+    
+                                
+                            </div>
+                        </div>
+                                        
+                        
+                    </center>	
+                    </button>
+				
+					
+
+			</table> 
+			
+		</td>
+		
+	</tr>
+</table>
+
+</body>
+</html>
+{% endblock content %}

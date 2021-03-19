@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+  
+  #li_text{
+      list-style: none;
+    }
+</style>
+<html>
+<head>
+ 
+  
+    <center> 
+       <img src="{% static 'imagen/imagen1.png' %}">
+       <title>Changing Styles</title>
+       <h1>Estetitica Unisex </h1>
+       <h1>Calle Argentina 1368 Ampl. Santa rosa </h1>
+       <h1>Gómez Palacio Dgo.  </h1>
+       <h1>Cel. 8711219504 </h1>
+        <ul>
+        {% for posts in blogs %}
+        <div class="detalle-entry">
+          <h2> <a href="{% url 'informacion' posts.pk %}"> {{ posts.text}} </a> </h2>
+                          <p> {{posts.informacion}}</p>
+      </div>
+            {% endfor %}
+        </ul>   
+
+      <p style="color:indianred; font-size:100px">Changing Styles</p>
+      <p style="color:rgb(209, 143, 0); font-size:100px">Patricia Garcia Almanza</p>
+      <img src="{% static 'imagen/imagen2.jpeg' %}">
+      
+    </center>
+  
+</head>
+</html>
+
+
+
+{% endblock content %}

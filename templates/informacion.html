@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style2.css' %}">
+<html>
+<head>
+  <title>Changing Styles</title>
+</head>
+<body>
+<table cellspacing="1" cellpadding="0" border="0" bgcolor="black" id="shell" height="250" width="1000" align="center">
+	<tr height="50">
+		<td colspan="2" bgcolor="black"> 
+		
+			<table title="Banner" id="banner" border="0" align="center"> 
+				<tr>
+					
+					<center>
+						<h1 style="color:indianred">Sobre Changing Styles ...</h1>
+						<img src="{% static 'imagen/imagen3.jpg' %}" class="center">
+					</center>
+					
+				</tr> 
+			</table>
+		
+		</td>
+	</tr>
+	<tr height="200">
+		<td bgcolor="black"> 
+		
+			<table id="navigation" title="Navigation" border="0">
+
+				<button>
+				<center>
+					<a href="#openModal">Cortes de Cabello </a>
+
+					<div id="openModal" class="modalDialog">
+						<div>
+							<a href="#close" title="Close" class="close">X</a>
+							<ul>
+								<div class="detalle-entry">
+									<h2> {{ Blogs.text }}  </h2>
+									<p>  {{ Blogs.informacion }} </p>
+								</div> 
+								  <li id="li_text">
+									<img src='{{informacion.infromacion }}' class="center">
+								</li>
+									
+								</ul> 
+
+							
+						</div>
+					</div>
+									
+					<img src="{% static 'imagen/imagen4.jpg' %}" class="center">
+				</center>	
+					
+				</button>	
+
+				<button>
+					<center>
+						
+						<a href="#openModal2">Tintes y Manicure </a>
+
+					<div id="openModal2" class="modalDialog">
+						<div>
+							<a href="#close" title="Close" class="close">X</a>
+							{% for informacion2s in listado %}
+									<li id="li_text">
+										<h1>{{ informacion2s.text }}</h1>
+										{% endfor %}		
+									</li>
+									{% for informacion2 in listado %}	
+									<li id="li_text">
+										
+									 <P>{{ informacion2.descripcion }}</P> 
+								  </li>
+								  {% endfor %}
+								  {% for informacion2 in listado %} 
+								  <li id="li_text">
+									<img src='{{informacion2.infromacion }}' class="center">
+								</li>
+									{% endfor %}
+														
+						</div>
+					</div>
+								
+						
+					<img src="{% static 'imagen/imagen5.jpg' %}" class="center">
+					</center>	
+						
+					</button>	
+					<button>
+						<center>
+							<a href="#openModal3">Uñas </a>
+
+					<div id="openModal3" class="modalDialog">
+						<div>
+							<a href="#close" title="Close" class="close">X</a>
+							<h2>Uñas</h2>
+							<p>Uñas chicas.....$150</p>
+							<p>Uñas medianas...$300</p>
+							<p>Uñas grandes....$500 en adelante</p>
+							<p>Gelish..........$100</p>
+														
+						</div>
+					</div>
+					<img src="{% static 'imagen/imagen6.jpg' %}" class="center">
+							
+						</center>	
+							
+					</button>	
+					<button>
+						<center>
+							
+							<a href="#openModal4">Peinados </a>
+
+					<div id="openModal4" class="modalDialog">
+						<div>
+
+							<a href="#close" title="Close" class="close">X</a>
+							<h2>Peinados</h2>
+							<p>Ondas.....$150</p>
+							<p>Peinado sencillo......$200</p>
+							<p>Peinado de novia......$350</p>
+							<p>Peinado de graduacion.$400 con maquillaje</p>
+														
+						</div>
+					</div>
+							
+					<img src="{% static 'imagen/imagen7.jpg' %}" class="center">
+						</center>	
+							
+					</button>		
+					
+
+			</table> 
+			
+		</td>
+		
+	</tr>
+</table>
+
+</body>
+</html>
+{% endblock content %}
