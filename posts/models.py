@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 # Create your models here.
 class Informacion(models.Model):
     text = models.TextField(default = "")
@@ -20,10 +21,5 @@ class Post(models.Model):
     def __str__(self):
         return self.text[:500]
 
-
-
-
-
-
-   
-
+    def get_absolute_url(self):
+        return reverse('informacion', args=[str(self.id)])

@@ -41,6 +41,8 @@
 								<div class="detalle-entry">
 									<h2> {{ Blogs.text }}  </h2>
 									<p>  {{ Blogs.informacion }} </p>
+									<p><a href="{% urls 'editarDetalle' Blogs.pk %}"> Editar Nota</a></p>
+									<p><a href="{% urls 'eliminarDetalle' Blogs.pk %}"> Eliminar Nota</a></p>
 								</div> 
 								  <li id="li_text">
 									<img src='{{informacion.infromacion }}' class="center">
