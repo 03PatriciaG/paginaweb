@@ -39,19 +39,17 @@
 							<ul>
                                 <h2>Cortes</h2>
 								<div class="detalle-entry">
-									<h2> {{ Blogs.text }}  </h2>
-									<p>  {{ Blogs.informacion }} </p>
+									<h2> {{blogs.titulo}}  </h2>
+									<p>  {{blogs.precio}} </p>
 								</div> 
 								  <li id="li_text">
 									<img src='{{informacion.infromacion }}' class="center">
 								</li>
                                 
-                                <p>Corte de niño.....$150</p>
-                                <p>Corte de Hombre......$200</p>
-                                <p>Corte de mujer......$350</p>
+                               
                                 <img src="{% static 'imagen/imagen4.jpg' %}" class="center">
-								<p><a href="{% url 'editarDetalle' Blogs.pk %}"> Editar Nota</a></p>
-								<p><a href="{% url 'eliminarDetalle' Blogs.pk %}"> Eliminar Nota</a></p>
+								<p><a href="{% url 'editarDetalle' blogs.pk %}"> Editar Nota</a></p>
+								<p><a href="{% url 'eliminarDetalle' blogs.pk %}"> Eliminar Nota</a></p>
                             
 								</ul> 
 
@@ -72,8 +70,8 @@
                                 <ul>
                                     <h2>Bases</h2>
                                     <div class="detalle-entry">
-                                        <h2> {{ Blogs.text }}  </h2>
-                                        <p>  {{ Blogs.informacion }} </p>
+                                        <h2> {{ blogs.titulo }}  </h2>
+                                        <p>  {{ blogs.informacion }} </p>
                                     </div> 
                                       <li id="li_text">
                                         <img src='{{informacion.infromacion }}' class="center">

@@ -27,11 +27,11 @@ class notaCreateView(CreateView):
 class notaUpdateView(UpdateView):
     model = Post
     template_name = 'editarDetalle.html'
-    fields =[ 'text', 'informacion']
+    fields =[ 'titulo', 'informacion']
     
 class notaDeleteView(DeleteView):
     model = Post
     template_name = 'eliminarDetalle.html'
-    context_object_name = 'Blogs'
+    context_object_name = 'blogs'
     success_url = reverse_lazy('home')
     
