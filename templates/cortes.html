@@ -41,8 +41,6 @@
 								<div class="detalle-entry">
 									<h2> {{ Blogs.text }}  </h2>
 									<p>  {{ Blogs.informacion }} </p>
-									<p><a href="{% urls 'editarDetalle' Blogs.pk %}"> Editar Nota</a></p>
-									<p><a href="{% urls 'eliminarDetalle' Blogs.pk %}"> Eliminar Nota</a></p>
 								</div> 
 								  <li id="li_text">
 									<img src='{{informacion.infromacion }}' class="center">
@@ -52,6 +50,8 @@
                                 <p>Corte de Hombre......$200</p>
                                 <p>Corte de mujer......$350</p>
                                 <img src="{% static 'imagen/imagen4.jpg' %}" class="center">
+								<p><a href="{% url 'editarDetalle' Blogs.pk %}"> Editar Nota</a></p>
+								<p><a href="{% url 'eliminarDetalle' Blogs.pk %}"> Eliminar Nota</a></p>
                             
 								</ul> 
 

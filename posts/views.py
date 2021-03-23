@@ -29,7 +29,7 @@ class notaUpdateView(UpdateView):
     template_name = 'editarDetalle.html'
     fields =[ 'text', 'informacion']
     
-class notaUpdateView(DeleteView):
+class notaDeleteView(DeleteView):
     model = Post
     template_name = 'eliminarDetalle.html'
     context_object_name = 'Blogs'

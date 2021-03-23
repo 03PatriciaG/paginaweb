@@ -22,4 +22,4 @@ class Post(models.Model):
         return self.text[:500]
 
     def get_absolute_url(self):
-        return reverse('informacion', args=[str(self.id)])
+        return reverse('cortes', args=[str(self.id)])
