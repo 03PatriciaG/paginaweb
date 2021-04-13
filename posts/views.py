@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, TemplateView
 from .models import Post
 from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
@@ -9,10 +9,11 @@ from django.urls import reverse_lazy
 
 #aqui se crean las vistas para nuestra pagina
 
-class HomePagueView(ListView):
+class HomePagueView(TemplateView):
     model = Post #utilizando el modelo Post en donde se encuentra la llave y la infromacion principal
     template_name = 'home.html' #se va a dirigir al html llaamado home
     context_object_name = 'blogs' #utilizaremos un objeto llamado blogs en donde vendra la informacion de posts
+
 
 class InformacionPagueView(DetailView):
     model = Post    #utilizando el modelo Post en donde se encuentra la llave y la infromacion principal
@@ -34,4 +35,9 @@ class notaDeleteView(DeleteView):
     template_name = 'eliminarDetalle.html'  #se va a dirigir al html llaamado eliminarDetalle
     context_object_name = 'blogs'
     success_url = reverse_lazy('home') #al eliminar la nota nos regresara a la pagina principal
+    
+class VideoView(ListView):
+    model = Post  #utilizando el modelo Post en donde se encuentra la llave y la infromacion principal
+    template_name = 'video.html'  #se va a dirigir al html llaamado eliminarDetalle
+    context_object_name = 'blogs' #utilizaremos un objeto llamado blogs en donde vendra la informacion de posts
     

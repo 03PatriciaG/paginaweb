@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<html>
+    <head>
+        <title>{% block title %}Style{% endblock title %}</title>
+
+    </head>
+    <body>
+        <center>
+            <div >
+                <h1 style="color: coral; font-family:unset;">Videos sobre nuestro trabajo</h1>         
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/yK6z7sAde6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div> 
+        </center>
+       
+    </body>
+</html>
+
+
+
+
+{% endblock content %}

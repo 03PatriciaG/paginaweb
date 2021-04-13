@@ -1,22 +1,63 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+ 
 <head>
+  
+    <style type="text/css">
+                .pater > div {
+        display: inline-block;
+        width: 18%;
+           
+        background: #F3F3A1;
+        margin: 0;
+        }
+        
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>{% block title %}Style{% endblock title %}</title>
 
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <h1> <a href="{% url 'home' %}">Inicio</a> </h1>
+    <center>
+        <h1>  Bienvenido </h1>
+    </center>
+    <div class="pater">
+      
 
-    <h1><a href="{% url 'notaNueva' %}"> Agregar actualizaciones </a></h1>
-</head>
-<body>
+     <div> 
+         <p><a href="{% url 'home' %}" class="btn btn-danger">Pagina principal</a> </p>
+    </div>
     <div>
+        <p><a href="{% url 'video' %}" class="btn btn-danger">Videos</a></p>
+
+    </div>
+       {% if user.is_authenticated %}
+          <div><p>Bienvenido {{ user.username}}</p></div>
+           <div> <p><a href="{% url 'logout' %}" class="btn btn-danger">Log out</a></p></div>
+        {% else %}
+           <div> <p>Inicie sesion</p> </div>
+           <div> <p><a href= "{% url 'login' %}" class="btn btn-danger">Login in</a></p></div>
+          <div>  <p><a href= "{% url 'registrar' %}" class="btn btn-danger">Registrar</a></p></div>
+        {% endif %}
         {% block content %}
         {% endblock content %}
+
         
     </div>
-</body>
+    
+    
+ 
+    
+       
+       
+
+    <h3><a href="{% url 'notaNueva' %}"> Agregar actualizaciones </a></h3>
+ 
+
+
+</head>
+
 </html>

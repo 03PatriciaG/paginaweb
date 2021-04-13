@@ -31,66 +31,56 @@
 
 				<button>
 				<center>
-					<a href="#openModal">Cortes de Cabello </a>
-
-					<div id="openModal" class="modalDialog">
-						<div>
-							<a href="#close" title="Close" class="close">X</a>
-							<ul>
-                                <h2>Cortes</h2>
-								<div class="detalle-entry">
-									<h2> {{blogs.titulo}}  </h2>
-									<p>  {{blogs.precio}} </p>
-								</div> 
-								  <li id="li_text">
-									<img src='{{informacion.infromacion }}' class="center">
-								</li>
-                                
-                               
-                                <img src="{% static 'imagen/imagen4.jpg' %}" class="center">
-								<p><a href="{% url 'editarDetalle' blogs.pk %}"> Editar Nota</a></p>
-								<p><a href="{% url 'eliminarDetalle' blogs.pk %}"> Eliminar Nota</a></p>
-                            
-								</ul> 
-
-							
-						</div>
-					</div>
-									
+					<img src="{% static 'imagen/imagen4.jpg' %}" class="center">
 					
 				</center>	
                 </button>
                 <button>
                     <center>
-                        <a href="#openModa2">Bases </a>
-    
-                        <div id="openModa2" class="modalDialog">
-                            <div>
-                                <a href="#close" title="Close" class="close">X</a>
-                                <ul>
-                                    <h2>Bases</h2>
-                                    <div class="detalle-entry">
-                                        <h2> {{ blogs.titulo }}  </h2>
-                                        <p>  {{ blogs.informacion }} </p>
-                                    </div> 
-                                      <li id="li_text">
-                                        <img src='{{informacion.infromacion }}' class="center">
-                                    </li>
-                                    
-                                    <p>Boomerang.....$150</p>
-                                    <p>Espirales......$200</p>
-                                    <p>Huesitos......$350</p>
-                                    <img src="{% static 'imagen/imagen5.jpg' %}" class="center">
-                                
-                                    </ul> 
-    
-                                
-                            </div>
-                        </div>
-                                        
-                        
+						<img src="{% static 'imagen/imagen5.jpg' %}" class="center">
                     </center>	
                     </button>
+					<button>
+						<center>
+							<a href="#openModal" style="color: crimson;">*************Lista de servicios*********** </a>
+		
+							<div id="openModal" class="modalDialog">
+								<div>
+									<a href="#close" title="Close" class="close">X</a>
+									<ul>
+										<h2 style="font-family: cursive;" style="color: darkgoldenrod;"> *Lista de servicios*</h2>
+										<div class="detalle-entry">
+											<h2 style="color: darkcyan;"> {{blogs.titulo}}  </h2>
+											<p style="color: darkcyan;">   {{blogs.precio}} </p>
+										</div> 
+										{% for informacion in listado %}
+										  	<img src='{{ informacion.infromacion }}' class="center">			   
+										{% endfor %}
+										<p><a href="{% url 'editarDetalle' blogs.pk %}"> Editar Nota</a></p>
+										<p><a href="{% url 'eliminarDetalle' blogs.pk %}"> Eliminar Nota</a></p>
+									
+										</ul> 
+		
+									
+								</div>
+							</div>
+											
+							
+						</center>	
+						</button>
+					<button>
+						<center>
+							<img src="{% static 'imagen/imagen6.jpg' %}" class="center">
+							
+						</center>	
+						</button>
+						<button>
+							<center>
+								<img src="{% static 'imagen/imagen7.jpg' %}" class="center">											
+								
+							</center>	
+							</button>
+							
 				
 					
 

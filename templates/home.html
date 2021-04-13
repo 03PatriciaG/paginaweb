@@ -10,19 +10,19 @@
 </style>
 <html>
 <head>
-<ul>
-  {% for posts in blogs %}
-  <div class="detalle-entry">
-  <h2> <a href="{% url 'cortes' posts.pk %}"> {{ posts.titulo}} </a> </h2>
-                      <p> {{posts.informacion}}</p>
-      
-                      
-                      
-      
-                      
-  </div>
-       {% endfor %}
-</ul>   
+  <ul>
+    {% for posts in blogs %}
+    <div class="detalle-entry">
+    <h2> <a href="{% url 'cortes' posts.pk %}"> {{ posts.titulo}} </a> </h2>
+                        <p> {{posts.informacion}}</p>
+        
+                        
+                        
+        
+                        
+    </div>
+         {% endfor %}
+  </ul>   
   
     <center> 
        <img src="{% static 'imagen/imagen1.png' %}">

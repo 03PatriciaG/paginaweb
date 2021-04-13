@@ -4,8 +4,8 @@
     padding-left: 11em;
     font-family: Georgia, "Times New Roman",
           Times, serif;
-    color:rgb(112, 25, 39);
-    background-color:darksalmon
+    color:rgba(4, 7, 170, 0.932);
+    background-color:rgb(191, 215, 248)
    
   }
 
@@ -22,7 +22,7 @@
     font-family: Helvetica, Geneva, Arial,
           SunSans-Regular, sans-serif }
   ul.navbar li {
-    background: white;
+    background: rgb(14, 179, 63);
     margin: 0.5em 0;
     padding: 0.3em;
     border-right: 1em solid black }
@@ -30,9 +30,9 @@
     text-decoration: none }
   
   a:link {
-    color:coral }
+    color:blueviolet }
   a:visited {
-    color:brown }
+    color:rgb(28, 10, 185) }
   address {
     margin-top: 1em;
     padding-top: 1em;
