@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %} 
+
+<div>
+    <h1 style="color: darkblue;">Correo</h1>
+    <a> {{usuario.email}}</a>
+
+    <h1 style="color: darkblue;">Telefono</h1>
+    <a> {{usuario.telefono}}</a>
+
+</div>
+
+<div>
+    <button class="btn btn-danger">
+        <a href="/cambiarCotraseña/{{usuario.pk}}">Cambiar
+        contraseña</a></button>
+</div>
+{% endblock content %}

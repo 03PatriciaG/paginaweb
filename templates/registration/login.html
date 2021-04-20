@@ -5,10 +5,12 @@
         {{ form.as_p }}
 
         <button type="submit"> Log in</button>
-        
-
 
     </form> 
+
+    <p>Olvidé la contraseña</p>
+    <button class="btn btn-success"><a href="{% url 'password_reset_form' %}"
+            style="text-decoration-line: none; text-decoration-style: none; color: white;">Restablecer</a></button>    
 
 
 

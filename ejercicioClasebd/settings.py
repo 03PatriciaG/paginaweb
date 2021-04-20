@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
   
-    
+    'usuarios',
     'posts.apps.PostsConfig',
     'cuentas.apps.CuentasConfig',
     'django.contrib.admin',
@@ -123,6 +123,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+AUTH_USER_MODEL = 'usuarios.UsuarioPers'
 LOGIN_REDIRECT_URL='home'
 LOGOUT_REDIRECT_URL='home'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 #AUTH_USER_MODEL = 'posts.UsuarioPers'
